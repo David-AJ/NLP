@@ -1,5 +1,5 @@
-﻿#-*-coding:utf-8-*- 
-def wordcont(wordlist):
+#-*-coding:utf-8-*- 
+def wordcount(wordlist):
 	dic = {}
 	for i in wordlist[:,1]:
 		if i == None:
