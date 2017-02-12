@@ -11,6 +11,7 @@ urls = []
 docs = []
 
 try:
+	# create tree from string list	
 	tree = ET.fromstringlist(t)
 	urls.append(tree.find('url').text)
 	docs.append(tree.find('content').text)
