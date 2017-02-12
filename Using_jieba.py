@@ -11,11 +11,12 @@ f.close()
 # 去除最后一个'\r\n' 
 StopWord.remove(StopWord[-1])
 
+
 def cut(sentence):
 		global StopWord
 		if sentence[1]!=None:
-			sentence[1] = jieba.lcut(sentence[1],cut_all=False)
-		return [i for i in sentence if i not in StopWord]
+			sentence[1] = [word for word in jieba.lcut(sentence[1],cut_all=False) if word not in StopWord]
+		return [i for i in sentence]
 
 if __name__ == '__main__':	
 	path = raw_input("Enter the path: ")
