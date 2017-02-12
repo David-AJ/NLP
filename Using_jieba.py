@@ -10,7 +10,7 @@ StopWord  = f.read().split('\r\n')
 f.close()
 # 去除最后一个'\r\n' 
 StopWord.remove(StopWord[-1])
-
+StopWord  = set(StopWord)
 
 def cut(sentence):
 		global StopWord
