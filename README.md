@@ -8,7 +8,7 @@
 * readXML.py    
 引入xml.etree.ElementTree模块的method实现从字符串中获取xml结构并解析    
 
-* WordCount.py    
+* word_frequency.py    
 利用字典结构实现单词计数，统计词频    
 
 * StopWord.txt    
