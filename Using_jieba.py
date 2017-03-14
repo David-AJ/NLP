@@ -20,12 +20,12 @@ def cut(sentence):
 
 if __name__ == '__main__':	
 	path = raw_input("Enter the path: ")
-	data = np.load(path)
+	data = np.load(path+'npy')
 	# 使用多进程编程提高分词速度  
 	pool = Pool(cpu_count())
 	data = pool.map(cut, data)
 	pool.close()
 	pool.join()	
 	data = np.array(data)
-	np.save(path,data)
+	np.save(path+'_cut.npy',data)
 	
